@@ -59,7 +59,7 @@ pipeline{
                 withCredentials([usernamePassword(credentialsId: 'sudipa_nexus', passwordVariable: 'pass', usernameVariable: 'usr')]){
                 sh label: '', script: 'curl -u ${usr}:${pass} --upload-file nimisha.zip http://3.14.251.87:8081/nexus/content/repositories/devopstraining/Nimisha-python/nimisha.zip'
             }
-            
+            }
         }
           stage ('Deploy'){
       steps{
@@ -70,7 +70,7 @@ pipeline{
         
     }
 }
-}
+
     
     
     
