@@ -12,6 +12,10 @@ response = [
 ]
 
 @app.route("/")
+@app.route("/form")
+def form():
+    return render_template('form.html')
+
 @app.route("/home")
 def home():
     return render_template('home.html',response=response[randrange(len(response))])
@@ -20,9 +24,7 @@ def home():
 def about():
     return render_template('about.html')
 
-@app.route("/form")
-def form():
-    return render_template('form.html')
+
 
 
 if __name__ == '__main__':
