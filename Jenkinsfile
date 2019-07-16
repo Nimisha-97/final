@@ -6,6 +6,7 @@ pipeline{
          FLASK_ENV='production'
  
        }
+    
     stages{
         stage('checkout'){
             steps{
